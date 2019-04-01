@@ -1,0 +1,77 @@
+<!-- Tabs -->
+<div class="tabs">
+  <ul>
+    <li><a href="#" class="active"><span>Cart</span></a></li>
+  </ul>
+</div>
+<!-- Tabs -->
+<!-- Container -->
+<!--<div id="container">
+
+  <div class="tabbed">-->
+<!-- First Tab Content -->
+<!--<div class="tab-content" style="display:block;">
+  <div class="items">
+    <div class="cl">&nbsp;</div>
+    <ul>
+      <li *ngFor="let item of shoesDetail">
+        <div class="image">
+          <a href="#"><img src="{{item.picture}}" alt="" /></a>
+        </div>
+          <p>
+            Item Number: <span>{{item.id}}</span><br />
+            Size List : <span>{{item.sizeList}}</span><br />
+            Brand Name: <a href="#">{{item.brandName}}</a>
+          </p>
+          <p class="price">Wholesale Price: <strong>{{item.price}} USD</strong></p>
+      </li>
+
+    </ul>
+    <div class="cl">&nbsp;</div>
+  </div>
+</div>-->
+<!-- End First Tab Content -->
+<!--</div>
+</div>-->
+<!-- End Container -->
+<!-- Editable table -->
+<!-- Editable table -->
+
+<!--<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
+<!--<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="../../assets/js/jquery-1.4.1.min.js"></script>
+
+<div id="container">
+  <table class="table">
+    <tr >
+      <th>Image</th>
+      <th>Item Number</th>
+      <th>Size List</th>
+      <th>Brand Name</th>
+      <th>Price</th>
+      <th>Number</th>
+      <th>Total</th>
+      <th></th>
+    </tr>
+    <tr  *ngFor="let item of shoesDetail" >
+      <td><img src="{{item.picture}}" alt="picture" /></td>
+      <td>{{item.id}}</td>
+      <td>{{item.sizeList}}</td>
+      <td>{{item.brandName}}</td>
+      <td>{{item.price}} $ </td>
+      <td>
+        <input type="number" id="txtnumber" (change)="updateNumber($event)" [(ngModel)]="item.number" >
+      </td>
+      <td>{{item.price*item.number}} $</td>
+      <td>
+        <button class="btnDelete" (click)="delete(item)" >Delete</button>
+      </td>
+    </tr>
+    <tr id="sumPrice" >
+      <td colspan="8" >Total: $ {{sumPrice}} </td>
+    </tr>
+  </table>
+</div>
+

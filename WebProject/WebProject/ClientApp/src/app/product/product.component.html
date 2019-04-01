@@ -1,0 +1,89 @@
+<!-- Tabs -->
+<div class="tabs">
+  <ul>
+    <li><a href="#" class="active" (click)="getProductKind(1)"><span>Safety Shoes</span></a></li>
+    <li><a href="#" (click)="getProductKind(2)"><span>Sport Shoes</span></a></li>
+    <li><a href="#" class="red" (click)="getProductKind(3)"><span>More Shoes</span></a></li>
+  </ul>
+</div>
+<!-- Tabs -->
+<!-- Container -->
+<div id="container">
+
+  <div class="tabbed">
+
+    <!-- First Tab Content -->
+    <div class="tab-content" style="display:block;">
+      <div class="items">
+        <div class="cl">&nbsp;</div>
+        <ul>
+
+          <li *ngFor="let item of listShoes">
+            <div class="image">
+              <a href="#"><img src="{{item.picture}}" alt="" /></a>
+            </div>
+            <p>
+              Item Number: <span>{{item.id}}</span><br />
+              Size List : <span>{{item.sizeList}}</span><br />
+              Brand Name: <a href="#">{{item.brandName}}</a>
+            </p>
+            <p class="price">Wholesale Price: <strong>{{item.price}} USD</strong></p>
+            <button class="btnAdd" (click)="addShoes(item)"> Add </button>
+          </li>
+        
+        </ul>
+        <div class="cl">&nbsp;</div>
+      </div>
+    </div>
+    <!-- End First Tab Content -->
+    <!-- Second Tab Content -->
+    <div class="tab-content">
+      <div class="items">
+        <div class="cl">&nbsp;</div>
+        <ul>
+
+          <li *ngFor="let item of listShoes">
+            <div class="image">
+              <a href="#"><img src="{{item.picture}}" alt="" /></a>
+            </div>
+            <p>
+              Item Number: <span>{{item.id}}</span><br />
+              Size List : <span>{{item.sizeList}}</span><br />
+              Brand Name: <a href="#">{{item.brandName}}</a>
+            </p>
+            <p class="price">Wholesale Price: <strong>{{item.price}}  USD</strong></p>
+            <button class="btnAdd" (click)="addShoes(item)"> Add </button>
+          </li>
+         
+        </ul>
+        <div class="cl">&nbsp;</div>
+      </div>
+    </div>
+    <!-- End Second Tab Content -->
+    <!-- Third Tab Content -->
+    <div class="tab-content">
+      <div class="items">
+        <div class="cl">&nbsp;</div>
+        <ul>
+
+          <li *ngFor="let item of listShoes">
+            <div class="image">
+              <a href="#"><img src="{{item.picture}}" alt="" /></a>
+            </div>
+            <p>
+              Item Number: <span>{{item.id}}</span><br />
+              Size List : <span>{{item.sizeList}}</span><br />
+              Brand Name: <a href="#">{{item.brandName}}</a>
+            </p>
+            <p class="price">Wholesale Price: <strong>{{item.price}}  USD</strong></p>
+            <button class="btnAdd" (click)="addShoes(item)"> Add </button>
+          </li>
+
+        </ul>
+        <div class="cl">&nbsp;</div>
+      </div>
+    </div>
+    <!-- End Third Tab Content -->
+  </div>
+</div>
+<!-- End Container -->
